@@ -2,7 +2,7 @@
 
 import UIKit
 
-public class PaymentProccessor {
+public class PaymentProcessor {
 
     fileprivate var batchSum : Double!{
         willSet{
@@ -16,7 +16,6 @@ public class PaymentProccessor {
     private var queue: Queue<Double>!
     private let BATCH_CAP: Double!
     private var defaults: UserDefaults!
-    static public var shared = PaymentProccessor()
     
     init() {
         defaults = UserDefaults()
@@ -85,7 +84,7 @@ public extension Double {
 
 var transactionsDataSource1 = [0.32,0.10,0.01,0.02]
 //var transactionsDataSource1 = [0.47]
-var processor = PaymentProccessor()
+var processor = PaymentProcessor()
 for i in 0..<transactionsDataSource1.count {
     processor.enqueue(transaction: transactionsDataSource1[i])
 }

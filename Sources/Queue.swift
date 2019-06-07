@@ -1,9 +1,10 @@
+//Author: Donny-Hack
+
 import Foundation
 
-public struct Queue<T: Codable> {
+public struct Queue<T> {
     
     private var dataSource  = [T]()
-    private var userDefaults = UserDefaults()
     public init() {}
     
     
